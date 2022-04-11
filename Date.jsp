@@ -1,18 +1,15 @@
 <html>
-<head><title>First JSPs</title></head>
+<head>
+<title>Hello World</title>
+</head>
 <body>
-  <%
-    double num = Math.random();
-    if (num > 0.95) {
-  %>
-      <h2>You'll have a luck day!</h2><p>(<%= num %>)</p>
-  <%
-    } else {
-  %>
-      <h2>Well, life goes on ... </h2><p>(<%= num %>)</p>
-  <%
-    }
-  %>
-  <a href="<%= request.getRequestURI() %>"><h3>Try Again</h3></a>
+<%-- This is a JSP Comment before JSP Scriplet --%>
+<%
+    //Prints out to console
+    System.out.println("Hello World in Console!");
+ 
+    //Prints out to HTML page
+    out.println("<h1>Hello World!</h1>");
+%>
 </body>
 </html>
